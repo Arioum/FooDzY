@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #FBFBFB ;
+}
+
+
+/********************** SEARCH RESULTS PAGE  *********************/
+
+/* Navbar Section */
+
+.Navbar {
+    background-color: #CE0505;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0.125em auto;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+
+.Navbar__row {
+    margin-top: 0.75em;
+    margin-right: 2em;
+}
+
+.Login {
+    display: inline-block;
+    margin-right: 1em;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+}
+
+.createAccount {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.62em 1em;
+    border-radius: 0.30em;
+    color: #CE0505;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.createAccount:hover {
+    background-color: #c9c9c9;
+}
+
+/******************** MAIN CONTENT AREA ***********************/
+
+/* Location Found Header */
+
+.places-found {
+    color: #192F60;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 1em;
+}
+
+/********* Filter/Sort Section ********/
+
+/* Filter */
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.Filter-Sort {
+    border: 2px solid #00000029;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 0 0 2em 2em;
+    display: inline-block;
+    width: 40%;
+    width:fit-content;
+    text-align: left;
+}
+
+.style1-header {
+    color: #192F60;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.style2-subheader {
+    color: #192F60;
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+}
+
+.style3 {
+    color: #8C96AB;
+}
+
+.dropdown {
+    padding: 0.5em 3em;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    border-color: #8C96AB;
+    border-width: 1.5px;
+    border-radius: 0.25em;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.style1-header,
+.style2-subheader,
+.dropdown {
+    margin: 5px 0;
+}
+
+/*  Cuisine Checkbox Section */
+
+.Label-Header {
+    margin-top: 1em;
+}
+
+.Cuisine-checkbox {
+    position: absolute;
+    accent-color: #CE0505 ;
+}
+
+.Cuisine-checkbox:hover {
+    cursor: pointer;
+}
+
+.Checkbox-label {
+    position: relative;
+    margin-left: 30px;
+}
+
+.filters input[type="checkbox"] {
+    height: 16px;
+    width: 16px;    
+}
+
+/* Cost of Two RadioButton Section */
+
+.CostofTwo-radio {
+    position: absolute;
+    accent-color: #CE0505 ;
+}
+
+.CostofTwo-radio:hover {
+    cursor: pointer;
+}
+
+
+.Radio-label {
+    position: relative;
+    margin-left: 30px;
+}
+
+.filters input[type="radio"] {
+    height: 16px;
+    width: 16px; 
+}
+
+/* Sort */
+
+.Sort-Header {
+    margin-top: 1em;
+}
+
+.Price-radio {
+    position: absolute;
+    accent-color: #CE0505 ;
+}
+
+.Price-radio:hover {
+    cursor: pointer;
+}
+
+
+/* Apply and Reset buttons */
+
+.Reset-Changes {
+    color: #fff;
+    background-color: #CE0505;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.Reset-Button{
+    margin-top: 2em;
+    margin-left: 1.60em;
+}
+
+/******************SEARCH RESULTS*******************/
+
+/* Restaurant Cards */
+
+/* Upper half */
+
+.Search-Results {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    text-align: left;
+}
+
+.Result-scroll-container {
+    width: 100%;
+}
+
+.ResultContainer {
+    border: 2px solid #00000029;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2em;
+    margin-top: 0;
+    max-width: fit-content;
+    min-width: fit-content;
+}
+
+.image-header-content {
+    display: flex;
+}
+
+.Resultpage-img {
+    border-radius: 20px;
+}
+
+.Restaurant-Info p{
+    color: #192F60;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.Restaurant-Info {
+    margin-left: 2em;
+}
+
+.Restaurant-Header {
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+
+.Restaurant-Theme {
+    font-size: 1.10rem;
+    font-weight: 600;
+}
+
+/* Lower Half */
+
+.cuisine-cost {
+    display: flex;
+}
+
+.cuisine-cost p{
+    margin: 0;
+    color: #192F60;
+}
+
+.cuisine-cost-label-content {
+    font-weight: 900;
+    margin-left: 2em;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FooDzY - Order Food Online</title>
+    <link rel="stylesheet" href="Search.css">
+</head>
+
+<body>
+    <div class="Navbar">
+        <div class="Logo">
+            <a class="Logo" href="HomePage.html">FooDzY</a>
+        </div>
+        <div class="Navbar__row">
+            <a class="Login" href="">Login</a>
+            <a class="createAccount" href="">Create an account</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="places-found">
+            <p>Breakfast Places in Bangalore</p>
+        </div>
+           <!-- Sort/Filter Section -->
+
+        <div class="Filter-Sort">
+            <div class="filters">
+                <!-- Filter  -->
+                <div class="style1-header">Filters</div>
+                <label class="style2-subheader" for="Select Location">Select Location</label>
+                <select class="style3 dropdown" name="" id="">
+                    <option value="">Select Location</option>
+                    <option value="">Bangalore</option>
+                    <option value="">Chennai</option>
+                    <option value="">Kochi</option>
+                    <option value="">Hyderabad</option>
+                    <option value="">Mumbai</option>
+                    <option value="">Delhi</option>
+                    <option value="">Kolkata</option>
+                    <option value="">Goa</option>
+                </select>
+                
+                <label class="style2-subheader Label-Header"for="">Cuisine</label>
+
+                <input class="Cuisine-checkbox" type="checkbox" name="North Indian" id="Checkbox-label">
+                <label class="style3 Checkbox-label" for="North Indian">North Indian</label><br>
+                <input class="Cuisine-checkbox" type="checkbox" name="South Indian" id="">
+                <label class="style3 Checkbox-label" for="South Indian">South Indian</label><br>
+                <input class="Cuisine-checkbox" type="checkbox" name="Chinese" id="">
+                <label class="style3 Checkbox-label" for="Chinese">Chinese</label><br>
+                <input class="Cuisine-checkbox" type="checkbox" name="Fast Food" id="">
+                <label class="style3 Checkbox-label" for="Fast Food">Fast Food</label><br>
+                <input class="Cuisine-checkbox" type="checkbox" name="Street Food" id="">
+                <label class="style3 Checkbox-label" for="Street Food">Street Food</label><br>
+
+                <label class="style2-subheader Label-Header"for="">Cost of Two</label>
+
+                <input class="CostofTwo-radio" type="radio" name="Cost of Two" id="">
+                <label class="style3 Radio-label" for="">Less than ₹500</label><br>
+                <input class="CostofTwo-radio" type="radio" name="Cost of Two" id="">
+                <label class="style3 Radio-label" for="">₹500 to ₹1000</label><br>
+                <input class="CostofTwo-radio" type="radio" name="Cost of Two" id="">
+                <label class="style3 Radio-label" for="">₹1000 to ₹1500</label><br>
+                <input class="CostofTwo-radio" type="radio" name="Cost of Two" id="">
+                <label class="style3 Radio-label" for="">₹1500 than ₹2000</label><br>
+                <input class="CostofTwo-radio" type="radio" name="Cost of Two" id="">
+                <label class="style3 Radio-label" for="">₹2000 and above</label><br>
+                
+                <!-- Sort -->
+                <div class="style1-header Sort-Header">Sort</div>
+
+                <input class="Price-radio" type="radio" name="Sort" id="">
+                <label class="style3 Radio-label" for="Sort">Price low to high</label><br>
+                <input class="Price-radio" type="radio" name="Sort" id="">
+                <label class="style3 Radio-label" for="Sort">Price high to low</label><br>
+                <div class="Reset-Button">
+                    <a class="Reset-Changes" href="">Reset Changes</a>
+                </div>
+            </div>  
+        </div>
+        <div class="Search-Results">
+            <div class="Result-scroll-container">
+                <div class="ResultContainer">
+                    <div class="image-header-content">
+
+                        <div class="Resultpage-img">
+                            <img class="Resultpage-img" src="Images/1x1/Edli.png" alt="">
+                        </div>
+
+                        <div class="Restaurant-Info">
+                            <p class="Restaurant-Header">The Big Chilly Cakery</p>
+                            <p class="Restaurant-Theme">Bakery</p>
+                            <p class="Restaurant-Address">Shop1, Plot D, Samruddhi Complex, Ram Nagar, Bangalore</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="cuisine-cost">
+                        <div class="cuisine-cost-label">
+                            <p>CUISINE:</p>
+                            <p>COST FOR TWO:</p>
+                        </div>
+                        <div class="cuisine-cost-label-content">
+                            <p>Bakery</p>
+                            <p>₹700</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurant Cards -->
+                <div class="ResultContainer">
+                    <div class="image-header-content">
+
+                        <div class="Resultpage-img">
+                            <img class="Resultpage-img" src="Images/1x1/Edli.png" alt="">
+                        </div>
+
+                        <div class="Restaurant-Info">
+                            <p class="Restaurant-Header">The Big Chilly Cakery</p>
+                            <p class="Restaurant-Theme">Bakery</p>
+                            <p class="Restaurant-Address">Shop1, Plot D, Samruddhi Complex, Ram Nagar, Bangalore</p>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="cuisine-cost">
+                        <div class="cuisine-cost-label">
+                            <p>CUISINE:</p>
+                            <p>COST FOR TWO:</p>
+                        </div>
+                        <div class="cuisine-cost-label-content">
+                            <p>Bakery</p>
+                            <p>₹700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ResultContainer">
+                    <div class="image-header-content">
+
+                        <div class="Resultpage-img">
+                            <img class="Resultpage-img" src="Images/1x1/Edli.png" alt="">
+                        </div>
+
+                        <div class="Restaurant-Info">
+                            <p class="Restaurant-Header">The Big Chilly Cakery</p>
+                            <p class="Restaurant-Theme">Bakery</p>
+                            <p class="Restaurant-Address">Shop1, Plot D, Samruddhi Complex, Ram Nagar, Bangalore</p>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="cuisine-cost">
+                        <div class="cuisine-cost-label">
+                            <p>CUISINE:</p>
+                            <p>COST FOR TWO:</p>
+                        </div>
+                        <div class="cuisine-cost-label-content">
+                            <p>Bakery</p>
+                            <p>₹700</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
