@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/restaurantCard.css';
+import './restaurantCard.css';
 
 const RestaurantCard = () => {
     return (

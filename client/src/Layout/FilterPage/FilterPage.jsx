@@ -1,8 +1,8 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
-import SortBy from '../components/SortBy';
-import RestaurantCard from '../components/RestaurantCard';
-import './styles/filterPage.css'
+import SortBy from '../../components/Filter-Sort/SortBy';
+import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
+import './filterPage.css'
 
 const FilterPage = (props) => {
 

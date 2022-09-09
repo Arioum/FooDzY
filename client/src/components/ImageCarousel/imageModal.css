@@ -1,0 +1,30 @@
+.btn-view-gallery {
+    width: 242px;
+    height: 48px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    opacity: 0.8;
+    border: none;
+    font-size: .9rem;
+}
+
+.gallery-modal-container {}
+
+.swiper {
+    max-width: 600px;
+    height: 300px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide img {
+    min-width: 500px;
+}
+
+.swiper-button-prev img {
+    transform: rotate(45)
+}
+/* 
+.swiper-button-next img {} */
