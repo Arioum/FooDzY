@@ -1,0 +1,27 @@
+/******************** MAIN CONTENT AREA ***********************/
+
+/* Location Found Header */
+
+.places-found {
+    color: #192F60;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 2rem 0;
+}
+
+.flex-layout {
+    display: flex;
+    gap: 2em;
+    width: 100%;
+}
+
+.Search-Results {
+    vertical-align: top;
+    width: 100%;
+}
+
+.Result-scroll-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}

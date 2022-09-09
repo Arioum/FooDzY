@@ -1,0 +1,146 @@
+
+/********* Filter/Sort Section ********/
+
+/* Filter */
+
+.Filter-Sort {
+    border-radius: 10px;
+    padding: 2em;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: #FFFFFF;
+}
+
+.style1-header {
+    color: #192F60;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.style2-subheader {
+    color: #192F60;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+}
+
+.style3 {
+    color: #8C96AB;
+    font-size: .9rem;
+}
+
+.dropdown {
+    padding: 0.5em 3em;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    border-color: #8C96AB;
+    border-width: 1.5px;
+    border-radius: 0.25em;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.style1-header,
+.style2-subheader,
+.dropdown {
+    margin: 5px 0;
+}
+
+/*  Cuisine Checkbox Section */
+
+.cuisine-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-size: 1rem;
+}
+
+.item-align {
+    display: flex;
+    align-items: center;
+    gap: .6em;
+}
+
+.Label-Header {
+    margin-top: 1em;
+}
+
+.Cuisine-checkbox {
+    accent-color: #CE0505 ;
+}
+
+.Cuisine-checkbox:hover {
+    cursor: pointer;
+}
+
+.filters input[type="checkbox"] {
+    height: 16px;
+    width: 16px;    
+}
+
+/* Cost of Two RadioButton Section */
+
+.cost-of-two-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-size: 1rem;
+}
+
+.CostofTwo-radio {
+    accent-color: #CE0505 ;
+}
+
+.CostofTwo-radio:hover {
+    cursor: pointer;
+}
+
+.filters input[type="radio"] {
+    height: 16px;
+    width: 16px; 
+}
+
+/* Sort */
+
+.sort-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-size: 1rem;
+}
+
+.Sort-Header {
+    margin-top: 1em;
+}
+
+.Price-radio {
+    accent-color: #CE0505 ;
+}
+
+.Price-radio:hover {
+    cursor: pointer;
+}
+
+
+/* Apply and Reset buttons */
+.Reset-Button {
+    margin-top: 1.5em;
+    width: 100%;
+    display: flex;
+}
+
+.Reset-Changes {
+    color: #fff;
+    background-color: #CE0505;
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.Reset-Changes:hover {
+   color: #fff;
+   background-color: #b30404;
+}

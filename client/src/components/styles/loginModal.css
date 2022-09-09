@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+.createAccount{
+    border:none;
+    font-weight: 600;
+}
+
+.model-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header button {
+    background: transparent;
+    border: none;
+}
+
+.sign-up {
+    font-size: 2rem;
+    color: #192F60;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.signin-container {
+    display:flex;
+    flex-direction: column;
+    gap: 2.2em;
+    max-width: 500px;
+    
+}
+
+.signin-container a {
+    color: #192F60;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.gmail-signin,
+.facebook-signin {
+    padding: 1em;
+    border: 1px solid #C7C7C7;
+    border-radius: 6px;
+    min-width: 100px;
+    font-weight: medium;
+}
+
+.social-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.login-redirect-container hr{
+    border: 1px solid #C7C7C7;
+    margin-top: 4em;
+}
+
+.login-redirect {
+    color: #192F60;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-redirect a {
+    color: #CE0505;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: .5em;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.signin-form input,
+.signin-form button {
+    font-size: 1rem;
+    border: 1px solid #C7C7C7;
+    padding: .5em;
+    border-radius: 5px;
+} 
+
+.signin-form button { 
+    background-color: #CE0505;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: .8em 0;
+}
+
+.signin-form button:hover {
+    background-color: #b60606;
+}
+

@@ -1,0 +1,60 @@
+/* Restaurant Cards */
+
+/* Upper half */
+
+.ResultContainer {
+    border-radius: 10px;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px #00000029;
+}   
+
+.image-header-content {
+    display: flex;
+    gap: 2em;
+}
+
+.Resultpage-img {
+    border-radius: 20px;
+}
+
+.Restaurant-Info p {
+    color: #192F60;
+    margin-bottom: 0.5em;
+}
+
+.Restaurant-Info {
+    display: flex;
+    flex-direction: column;
+}
+
+.Restaurant-Header {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.Restaurant-Theme {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.Restaurant-Address {
+    font-size: 1rem;
+}
+
+/* Lower Half */
+
+.cuisine-cost {
+    display: flex;
+    font-size: 1rem;
+}
+
+.cuisine-cost p {
+    margin: 0;
+    color: #192F60;
+}
+
+.cuisine-cost-label-content {
+    font-weight: 900;
+    margin-left: 2em;
+}

@@ -1,0 +1,92 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+.wrapper {
+    max-width: 114em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.Nav-bg {
+    z-index: 1;
+    background-color: #CE0505;
+}
+
+.Nav-bg.color{
+    z-index: 1;
+}
+
+.Navbar {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    padding: 1em 0;
+}
+
+.Navbar-row {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.Login {
+    margin-right: 2em;
+    color: #fff;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+}
+
+.Login:hover {
+    color: #dfdfdf;
+}
+
+.createAccount {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.6em 1em;
+    border-radius: 0.30em;
+    color: #CE0505;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.createAccount:hover {
+    background-color: #cc0505;
+    /* outline: 1px solid #fff; */
+    color: #FBFBFB;
+}
+
+
+@media (max-width: 768px) {
+    .Navbar-row {
+        font-size: .8rem;
+    }
+
+    .Login { 
+        margin-right: 1em;
+    }
+
+    .Logo a img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Logo a img {
+        width: 90px;
+    }
+}
