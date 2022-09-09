@@ -1,7 +1,7 @@
 import React from 'react';
-import QuickSearchCard from '../components/QuickSearchCard';
-import quickCardData from '../components/quickCardData';
-import './styles/quickSearch.css';
+import QuickSearchCard from '../../components/QuickSearchCard';
+import quickCardData from '../../components/quickCardData';
+import './quickSearch.css';
 
 const QuickSearch = () => {
   return (

@@ -38,6 +38,11 @@
     border-radius: 0.25em;
 }
 
+.sty-2 {
+    height: 40px;
+    border: 1px solid #8C96AB;
+}
+
 .dropdown:hover {
     cursor: pointer;
 }

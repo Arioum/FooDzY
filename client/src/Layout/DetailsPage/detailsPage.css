@@ -1,0 +1,79 @@
+.section-gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0 0;
+}
+
+.img-gallery-banner {
+    position: relative;
+}
+
+.view-gallery-modal {
+    position: relative;
+    bottom: 70px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.restaurant-details-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant-details-name {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #192F60;
+}
+
+
+/* Overview */
+
+.restaurant-overview {
+    color: #192F60;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.restaurant-overview p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.restaurant-overview h6 {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.overview-about h4 {
+    font-weight: 600;
+}
+
+/* Contacts */
+.restaurant-contact {
+    color: #192F60;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.restaurant-contact h6{
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.restaurant-contact p{
+    font-size: 1.2rem;
+}
+
+.contact-number p {
+    color: #F67082;
+}
+
+.contact-address p {
+    max-width: 400px;
+}

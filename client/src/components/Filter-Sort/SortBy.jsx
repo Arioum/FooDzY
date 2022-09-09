@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/sortBy.css';
+import './sortBy.css';
 
 const SortBy = () => {
     return (
@@ -8,7 +8,7 @@ const SortBy = () => {
                 {/* <!-- Filter  --> */}
                 <div class="style1-header">Filters</div>
                 <div class="style2-subheader" for="Select Location">Select Location</div>
-                <select class="style3 dropdown" name="" id="">
+                <select class="style3 dropdown sty-2" name="" id="">
                     <option value="">Select Location</option>
                     <option value="">Bangalore</option>
                     <option value="">Chennai</option>
@@ -80,7 +80,7 @@ const SortBy = () => {
                         <label class="style3 Radio-label" for="Sort">Price high to low</label>
                     </div> 
                     <div class="Reset-Button">
-                        <a class="Reset-Changes" href="#">Reset Changes</a>
+                        <a class="Reset-Changes" href="/">Reset Changes</a>
                     </div>
                 </div>
             </div>

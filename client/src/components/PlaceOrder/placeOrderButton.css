@@ -1,0 +1,9 @@
+.btn-place-order button {
+    width: 223px;
+    height: 50px;
+    background: #CE0505;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;;
+}

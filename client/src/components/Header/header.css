@@ -33,7 +33,7 @@
     width: 260px;
     height: 60px;
     outline: none;
-    border: 1px solid #b9b9b9;
+    border: none;
     border-radius: 3px;
 }
 
@@ -43,7 +43,7 @@
     margin: 1em 1em;
     padding: 0 1em;
     outline: none;
-    border: 1px solid #b9b9b9;
+    border: none;
     border-radius: 3px;
 }
 
