@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import './home.css';
 
 const home = () => {
+
   return (
     <div>
       <div className="Banner">
