@@ -77,3 +77,35 @@
 .contact-address p {
     max-width: 400px;
 }
+
+/* REACT TABS CUSTOMIZATION */
+
+.tab-header {
+    font-size: 1.2rem;
+    color: #192F60;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+    border-bottom: 3px solid #D2D9E6;
+    margin: 1em 0;
+}
+
+.tab-item {
+    text-decoration: none;
+    list-style: none;
+    font-weight: 700;
+    color: #192F60;
+    padding: .5em 0;
+    
+}
+
+.tab-item:hover {
+    cursor: pointer;
+}
+
+.tab-item:focus {
+    outline: none;
+    border-bottom: 3px solid #CE0505;
+    position: relative;
+    top: 3px
+}
