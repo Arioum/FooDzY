@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+
+.model-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header button {
+    background: transparent;
+    border: none;
+}
+
+.sign-up {
+    font-size: 2rem;
+    color: #192F60;
+    font-family: 'Poppins';
+    font-weight: bold;
+}

@@ -11,7 +11,7 @@ const Navbar = () => {
                         <a href="/"><img src="/Images/logo.svg" alt="logo" /></a>
                     </div>
                     <div class="Navbar-row">
-                        <LoginButton className="createAccount"/>
+                        <LoginButton className="createAccount"/>         
                     </div>
                 </div>
             </div>
