@@ -9,11 +9,13 @@ const home = () => {
 
   return (
     <div>
-      <div className="Banner">
-        <img className="Banner-Image" src="Images/Banner.png" alt=""></img>
+      <div className="header-container">
+        <div className="Banner">
+          <img className="Banner-Image" src="Images/Banner.png" alt=""></img>
+        </div>
+        <Navbar />
+        <Header className="Banner-Header"/>
       </div>
-      <Navbar />
-      <Header className="Banner-Header"/>
       <QuickSearch />
       <Footer />
     </div>

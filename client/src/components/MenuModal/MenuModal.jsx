@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import '/menuModal.css';
+import './menuModal.css';
 
 const RestaurantName = 'Dominos'
 
@@ -20,7 +20,7 @@ const customStyles = {
     }
 };
 
-const LoginButton = () => {
+const MenuModal = () => {
     // Use state for modals
     const [menuModal, setMenuModal] = useState(false);
   
@@ -35,7 +35,7 @@ const LoginButton = () => {
 
     return (
         <div>
-            <button onClick={openMenuModal} className="Login">Login</button>
+            <button onClick={openMenuModal}>Place Online Order</button>
             <Modal
                 isOpen={menuModal}
                 // onAfterOpen={afterOpenModal}
@@ -46,7 +46,7 @@ const LoginButton = () => {
                 <div className="model-menu">
                     <div className="header">
                         <div className="sign-up">{RestaurantName}</div>
-                        <button onClick={closeLoginModal}>
+                        <button onClick={closeMenuModal}>
                             <img src="/Images/icons/close.svg" alt="close" />
                         </button>
                     </div>
@@ -58,4 +58,4 @@ const LoginButton = () => {
     )
 }
 
-export default LoginButton
+export default MenuModal
