@@ -107,7 +107,7 @@ const LoginButton = () => {
                             </div>
                         </form>
                         <div className="gmail-signin">
-                            <a href="/" className="social-login-button">
+                            <a href="/auth/google" className="social-login-button">
                                 <div className="social-icon">
                                     <img src="/Images/icons/gmail.svg" alt="" />
                                 </div>
