@@ -5,7 +5,6 @@ const MenuItem = () => {
     <div>
         <div className="item-container">
             <div className="item-details">
-
             </div>
             <div className="item-preview add-item-btn">
                 <div className="item-img">
