@@ -5,8 +5,6 @@ import quickCardData from './quickCardData';
 import './quickSearch.css';
 import axios from 'axios';
 
-
-
 const QuickSearch = () => {
   return (
     <div>
