@@ -4,25 +4,36 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const passport = require("passport");
-const session = require("express-session")
-
-
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 //
 const app = express();
-const PORT = process.env.port || 3000;
+const PORT = process.env.port || 4000;
 const routes = require("./routes/routes");
+const authRoute = require("./routes/auth");
 
 //intlizing all the libraries
-app.use(bodyParser.json());
-app.use(cors());
 app.use("/", routes);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
+// app.use("/", authRoute);
 app.use(
   session({
-    secret: "oneboy",
+    secret: "secretcode",
     saveUninitialized: true,
     resave: true,
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(cookieParser("secretcode"));
 
 //
 const url = process.env.MONGOLAB_URI;
@@ -32,7 +43,7 @@ app.get("/auth/google", (req, res) => {
 });
 
 app.get("/auth/facebook", (req, res) => {
-  passport.authenticate("facebook", { failureRedirect: "/login" });
+  passport.authenticate("facebook", { failureRedirect: "/" });
 });
 
 //connecting to mongodb
