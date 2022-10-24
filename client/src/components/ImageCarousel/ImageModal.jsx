@@ -25,18 +25,18 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'vertical',
     loop: true,
-  
+
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  
+
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-  });
+});
 
 
 const ImageModal = () => {
@@ -79,21 +79,21 @@ const ImageModal = () => {
                         </button>
                     </div>
                     <div className="carousel-container">
-                        <div class="swiper">
+                        <div className="swiper">
                             {/* <!-- Additional required wrapper --> */}
-                            <div class="swiper-wrapper">
+                            <div className="swiper-wrapper">
                                 {/* <!-- Slides --> */}
-                                <div class="swiper-slide"><img src="/Images/1x1/Breakfast.png" alt="" /></div>
-                                <div class="swiper-slide"><img src="/Images/1x1/Breakfast.png" alt="" /></div>
-                                <div class="swiper-slide"><img src="/Images/1x1/Breakfast.png" alt="" /></div>
+                                <div className="swiper-slide"><img src="/Images/1x1/Breakfast.png" alt="" /></div>
+                                <div className="swiper-slide"><img src="/Images/1x1/Breakfast.png" alt="" /></div>
+                                <div className="swiper-slide"><img src="/Images/1x1/Breakfast.png" alt="" /></div>
                                 ...
                             </div>
                             {/* <!-- If we need pagination --> */}
-                            <div class="swiper-pagination"></div>
+                            <div className="swiper-pagination"></div>
 
                             {/* <!-- If we need navigation buttons --> */}
-                            <div class="swiper-button-prev"><img src="/Images/icons/Arrow-Up.svg" alt="" /></div>
-                            <div class="swiper-button-next"><img src="/Images/icons/Arrow-Up.svg" alt="" /></div>
+                            <div className="swiper-button-prev"><img src="/Images/icons/Arrow-Up.svg" alt="" /></div>
+                            <div className="swiper-button-next"><img src="/Images/icons/Arrow-Up.svg" alt="" /></div>
                         </div>
                     </div>
                 </div>

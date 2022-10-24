@@ -8,24 +8,24 @@ import './quickSearch.css';
 const QuickSearch = () => {
   return (
     <div>
-      <div class="Homepage-Content wrapper">
-        <div class="Quick-Searches">
-          <div class="Quick-Searches-Header">
+      <div className="Homepage-Content wrapper">
+        <div className="Quick-Searches">
+          <div className="Quick-Searches-Header">
             Quick Searches
           </div>
-          <div class="Quick-Searches-Bottom">
+          <div className="Quick-Searches-Bottom">
             Discover restaurants by type of meal
           </div>
         </div>
 
-        <div class="Quick-Search-Container">      
+        <div className="Quick-Search-Container">
           {quickCardData.map((cardItem, index) => (
-            <Link to={cardItem.path} style={{textDecoration: 'none'}}>
+            <Link to={cardItem.path} key={index} style={{ textDecoration: 'none' }}>
               <QuickSearchCard
                 key={index}
                 imageURL={cardItem.imageURL}
                 cardTitle={cardItem.cardTitle}
-                cardDesc={cardItem.cardDesc} 
+                cardDesc={cardItem.cardDesc}
               />
             </Link>
           ))}

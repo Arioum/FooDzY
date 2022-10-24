@@ -16,13 +16,13 @@ const FilterPage = ({ category }) => {
     // }
     return (
         <div className="wrapper">
-            <div class="places-found">
+            <div className="places-found">
                 <p>{category} Places in Bangalore</p>
             </div>
             <div className="flex-layout">
                 <SortBy />
-                <div class="Search-Results">
-                    <div class="Result-scroll-container">
+                <div className="Search-Results">
+                    <div className="Result-scroll-container">
                         <RestaurantCard />
                         <RestaurantCard />
                         <RestaurantCard />
