@@ -4,7 +4,7 @@ import SortBy from '../../components/Filter-Sort/SortBy';
 import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
 import './filterPage.css'
 
-const FilterPage = (props) => {
+const FilterPage = ({ category }) => {
 
     // props.this.state = {
     //     activePage: 15
@@ -17,7 +17,7 @@ const FilterPage = (props) => {
     return (
         <div className="wrapper">
             <div class="places-found">
-                <p>Breakfast Places in Bangalore</p>
+                <p>{category} Places in Bangalore</p>
             </div>
             <div className="flex-layout">
                 <SortBy />
@@ -33,7 +33,7 @@ const FilterPage = (props) => {
                             itemsCountPerPage={3}
                             totalItemsCount={20}
                             pageRangeDisplayed={3}
-                            // onChange={this.handlePageChange().bind(this)}
+                        // onChange={this.handlePageChange().bind(this)}
                         />
                     </div>
                 </div>

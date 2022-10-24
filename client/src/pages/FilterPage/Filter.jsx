@@ -4,11 +4,11 @@ import Footer from '../../components/Footer/Footer';
 import FilterPage from '../../Layout/FilterPage/FilterPage';
 
 
-const Filter = () => {
+const Filter = ({category}) => {
   return (
     <div>
         <Navbar />
-        <FilterPage />
+        <FilterPage category={category}/>
         <Footer />
     </div>
   )

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import QuickSearchCard from '../../components/QuickSearchCard/QuickSearchCard';
 import quickCardData from './quickCardData';
 import './quickSearch.css';
-import axios from 'axios';
+
 
 const QuickSearch = () => {
   return (
@@ -19,9 +19,10 @@ const QuickSearch = () => {
         </div>
 
         <div class="Quick-Search-Container">      
-          {quickCardData.map((cardItem) => (
+          {quickCardData.map((cardItem, index) => (
             <Link to={cardItem.path} style={{textDecoration: 'none'}}>
               <QuickSearchCard
+                key={index}
                 imageURL={cardItem.imageURL}
                 cardTitle={cardItem.cardTitle}
                 cardDesc={cardItem.cardDesc} 

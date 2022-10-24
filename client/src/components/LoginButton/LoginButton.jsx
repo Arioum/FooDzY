@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Axios from 'axios';
 import Modal from 'react-modal';
 import '../LoginModal/loginModal.css';
 
@@ -30,15 +32,27 @@ const LoginButton = () => {
     })
 
     const [signUpData, setSignUpData] = useState({
-        FirstName: " ",
+        FirstName: "",
         LastName: "",
         email: "",
         password: ""
     })
 
+    // Login
+
+    const login = () => {
+        Axios({
+            method: "post",
+            data: loginData,
+            withCredentials: true,
+            url: "http://localhost:3000/signup"
+        }).then((res) => console.log(res));
+    }
+
+
     // FORM FUNCTIONALITY
     const handleChange = (event) => {
-        const {value, name} = event.target;
+        const { value, name } = event.target;
 
         setLoginData(inputValue => {
             if (name === "email") {
@@ -46,18 +60,25 @@ const LoginButton = () => {
                     email: value,
                     password: inputValue.password,
                 }
-            } else if ( name === "password") {
+            } else if (name === "password") {
                 return {
                     email: inputValue.email,
                     password: value,
-                    
+
                 }
             }
-        });   
+        });
     }
 
     const handleSubmit = () => {
-       
+
+    }
+
+
+    // GOOGLE SIGN IN
+
+    const googleSignIn = () => {
+        window.open("http://localhost:3000/auth/google", "_self")
     }
 
 
@@ -99,39 +120,39 @@ const LoginButton = () => {
                         </button>
                     </div>
                     <div className="signin-container">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={login}>
                             <div className="signin-form">
                                 <input type="email" name="email" onChange={handleChange} value={loginData.email} placeholder="Email" validate="required" />
                                 <input type="password" name="password" onChange={handleChange} value={loginData.password} placeholder="Password" validate="required" />
-                                <button type="submit" >Sign Up</button>
+                                <button type="submit">Sign Up</button>
                             </div>
                         </form>
                         <div className="gmail-signin">
-                            <a href="/auth/google" className="social-login-button">
+                            <Link to="/auth/google" onClick={googleSignIn} className="social-login-button">
                                 <div className="social-icon">
-                                    <img src="/Images/icons/gmail.svg" alt="" />
+                                    <img src="/Images/icons/gmail.svg" alt="G" />
                                 </div>
                                 <div className="gmail-login-text">
                                     Continue with Gmail
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="facebook-signin">
-                            <a href="/" className="social-login-button">
+                            <Link to="/auth/facebook" className="social-login-button">
                                 <div className="social-icon">
-                                    <img src="/Images/icons/fb.svg" alt="" width="26"></img>
+                                    <img src="/Images/icons/fb.svg" alt="FB" width="26"></img>
                                 </div>
                                 <div className="gmail-login-text">
                                     Continue with Facebook
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="login-redirect-container">
                         <hr />
                         <div className="login-redirect">
                             Already have an account?
-                            <a href="/">Login</a>
+                            <Link to="/">Login</Link>
                         </div>
                     </div>
                 </div>
@@ -162,31 +183,31 @@ const LoginButton = () => {
                             </div>
                         </form>
                         <div className="gmail-signin">
-                            <a href="/" className="social-login-button">
+                            <Link to="/" className="social-login-button">
                                 <div className="social-icon">
                                     <img src="/Images/icons/gmail.svg" alt="" />
                                 </div>
                                 <div className="gmail-login-text">
                                     Continue with Gmail
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="facebook-signin">
-                            <a href="/" className="social-login-button">
+                            <Link to="/" className="social-login-button">
                                 <div className="social-icon">
                                     <img src="/Images/icons/fb.svg" alt="" width="26"></img>
                                 </div>
                                 <div className="gmail-login-text">
                                     Continue with Facebook
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="login-redirect-container">
                         <hr />
                         <div className="login-redirect">
                             Don't have an account?
-                            <a href="/">Sign Up</a>
+                            <Link to="/">Sign Up</Link>
                         </div>
                     </div>
                 </div>
