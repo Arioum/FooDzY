@@ -104,7 +104,7 @@ const LoginButton = () => {
 
     return (
         <div>
-            <button onClick={openLoginModal} class="Login">Login</button>
+            <button onClick={openLoginModal} className="Login">Login</button>
             <Modal
                 isOpen={loginModal}
                 // onAfterOpen={afterOpenModal}
@@ -157,7 +157,7 @@ const LoginButton = () => {
                     </div>
                 </div>
             </Modal>
-            <button onClick={openSignUpModal} class="createAccount">Create an account</button>
+            <button onClick={openSignUpModal} className="createAccount">Create an account</button>
             <Modal
                 isOpen={signUpModal}
                 // onAfterOpen={afterOpenModal}

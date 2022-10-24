@@ -23,7 +23,7 @@ const customStyles = {
 const MenuModal = () => {
     // Use state for modals
     const [menuModal, setMenuModal] = useState(false);
-  
+
     // MODAL OPEN AND CLOSE FUNCTIONALITY
     function openMenuModal() {
         setMenuModal(true);
@@ -50,8 +50,6 @@ const MenuModal = () => {
                             <img src="/Images/icons/close.svg" alt="close" />
                         </button>
                     </div>
-                    
-                    
                 </div>
             </Modal>
         </div>

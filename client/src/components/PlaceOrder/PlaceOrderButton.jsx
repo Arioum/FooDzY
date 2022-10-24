@@ -4,7 +4,7 @@ import './placeOrderButton.css'
 
 const PlaceOrderButton = () => {
     return (
-        <div className='btn-place-order'>        
+        <div className='btn-place-order'>
             <MenuModal />
         </div>
     )
