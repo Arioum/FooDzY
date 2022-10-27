@@ -14,28 +14,38 @@ const Home = () => {
   })
 
   useEffect(() => {
-    Axios
-      .get(`${API_URL}/getAllLocations`)
-      .then((res) => {
-        setLocations({
-          Locations: res.data.Locations,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    Axios({
+      method: "GET",
+      withCredentials: true,
+      url: "http://localhost:4000/getAllLocations",
+    }).then((res) => {
+      setLocations(res.data);
+      console.log(res.data);
+    });
 
-    Axios
-      .get(`${API_URL}/getAllMealTypes`)
-      .then((res) => {
-        setLocations({
-          MealTypes: res.data.MealTypes,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // Axios
+    //   .get(`http://localhost:3000/getAllLocations`)
+    //   .then((res) => {
+    //     setLocations({
+    //       Locations: res.data.Locations,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    // Axios
+    //   .get(`http://localhost:4000/getAllMealTypes`)
+    //   .then((res) => {
+    //     setLocations({
+    //       MealTypes: res.data.MealTypes,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }, [])
+
   console.log(Locations);
 
   const navBg = true;
