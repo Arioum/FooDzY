@@ -35,6 +35,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cookieParser("secretcode"));
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type", "Authorization");
+  next();
+});
+
 //
 const url = process.env.MONGOLAB_URI;
 

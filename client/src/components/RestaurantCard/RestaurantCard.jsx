@@ -14,7 +14,7 @@ const RestaurantCard = () => {
                     <p className="Restaurant-Address">Shop1, Plot D, Samruddhi Complex, Ram Nagar, Bangalore</p>
                 </div>
             </div>
-            <hr />
+            <hr style={{ border: "1px solid #888" }} />
             <div className="cuisine-cost">
                 <div className="cuisine-cost-label">
                     <p>CUISINE:</p>

@@ -45,7 +45,7 @@ const LoginButton = () => {
             method: "post",
             data: loginData,
             withCredentials: true,
-            url: "http://localhost:3000/signup"
+            url: "http://localhost:4000/signup"
         }).then((res) => console.log(res));
     }
 
@@ -152,7 +152,7 @@ const LoginButton = () => {
                         <hr />
                         <div className="login-redirect">
                             Already have an account?
-                            <Link to="/">Login</Link>
+                            <Link to="/">Sign Up</Link>
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ const LoginButton = () => {
                         <hr />
                         <div className="login-redirect">
                             Don't have an account?
-                            <Link to="/">Sign Up</Link>
+                            <Link to="/">Login</Link>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ const SortBy = () => {
                 {/* <!-- Filter  --> */}
                 <div className="style1-header">Filters</div>
                 <div className="style2-subheader" for="Select Location">Select Location</div>
-                <select className="style3 dropdown sty-2" name="" id="">
+                <select className="style3 dropdown sty-2" id="">
                     <option value="">Select Location</option>
                     <option value="">Bangalore</option>
                     <option value="">Chennai</option>
