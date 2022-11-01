@@ -8,37 +8,39 @@ import Axios from 'axios'
 import './home.css';
 
 const Home = () => {
-  const [Locations, setLocations] = useState({
-    Locations: [],
-    MealTypes: [],
-  })
+  const [Locations, setLocations] = useState([])
+  const [MealTypes, setMealTypes] = useState([])
 
   useEffect(() => {
     Axios({
       method: "GET",
       withCredentials: true,
       url: `${API_URL}/getAllLocations`,
-    }).then((res) => {
-      setLocations(res.data);
-      console.log(res.data);
-    });
+    }).then((res) => res.json())
+      .then((data) => setLocations(data.Locations))
+      .catch((err) => {
+        console.log(err);
+      });
+
+
+    // Axios({
+    //   method: "GET",
+    //   withCredentials: true,
+    //   url: `${API_URL}/getAllMealTypes`,
+    // }).then((res) => {
+    //   setLocations({
+    //     MealTypes: res.data.MealTypes,
+    //   });
+    //   console.log(res.data);
+    // }).catch((err) => {
+    //   console.log(err);
+    // });
 
     // Axios
     //   .get(`http://localhost:4000/getAllLocations`)
     //   .then((res) => {
     //     setLocations({
     //       Locations: res.data.Locations,
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
-    // Axios
-    //   .get(`http://localhost:4000/getAllMealTypes`)
-    //   .then((res) => {
-    //     setLocations({
-    //       MealTypes: res.data.MealTypes,
     //     });
     //   })
     //   .catch((err) => {
@@ -56,7 +58,7 @@ const Home = () => {
           <img className="Banner-Image" src="Images/Banner.png" alt=""></img>
         </div>
         <Navbar navStyle={navBg} />
-        <Header className="Banner-Header" Locations={Locations.Locations} />
+        <Header className="Banner-Header" Locations={Locations} />
       </div>
       <QuickSearch />
       <Footer />
