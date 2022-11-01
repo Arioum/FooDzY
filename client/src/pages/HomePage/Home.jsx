@@ -12,16 +12,15 @@ const Home = () => {
   const [MealTypes, setMealTypes] = useState([])
 
   useEffect(() => {
-    Axios({
-      method: "GET",
-      withCredentials: true,
-      url: `${API_URL}/getAllLocations`,
-    }).then((res) => res.json())
-      .then((data) => setLocations(data.Locations))
-      .catch((err) => {
-        console.log(err);
-      });
-
+    // Axios({
+    //   method: "GET",
+    //   withCredentials: true,
+    //   url: `${API_URL}/getAllLocations`,
+    // }).then((res) => res.json())
+    //   .then((data) => setLocations(data.Locations))
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
 
     // Axios({
     //   method: "GET",
@@ -36,16 +35,16 @@ const Home = () => {
     //   console.log(err);
     // });
 
-    // Axios
-    //   .get(`http://localhost:4000/getAllLocations`)
-    //   .then((res) => {
-    //     setLocations({
-    //       Locations: res.data.Locations,
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    Axios
+      .get(`http://localhost:4000/getAllLocations`)
+      .then((res) => {
+        setLocations({
+          Locations: res.data.Locations,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [])
 
   console.log(Locations);
