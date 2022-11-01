@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Header from '../../components/Header/Header';
 import QuickSearch from '../../Layout/QuickSearch/QuickSearch';
 import Footer from '../../components/Footer/Footer';
-import { API_URL } from '../../constants/constants'
+import { API_URL } from '../../constants/constants';
 import Axios from 'axios'
 import './home.css';
 
@@ -17,14 +17,14 @@ const Home = () => {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:4000/getAllLocations",
+      url: `${API_URL}/getAllLocations`,
     }).then((res) => {
       setLocations(res.data);
       console.log(res.data);
     });
 
     // Axios
-    //   .get(`http://localhost:3000/getAllLocations`)
+    //   .get(`http://localhost:4000/getAllLocations`)
     //   .then((res) => {
     //     setLocations({
     //       Locations: res.data.Locations,

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/HomePage/Home";
 import Filter from "./pages/FilterPage/Filter";
 import Details from "./pages/DetailsPage/Details";
+import MenuPage from "./pages/MenuPage/MenuPage";
 
 const App = () => {
   // const category = "breakfast";
@@ -16,6 +17,7 @@ const App = () => {
           element={<Filter category={category} />}
         /> */}
         <Route path="/details" element={<Details />} />
+        <Route path="/menu" element={<MenuPage />} />
       </Routes>
     </Router>
   );
