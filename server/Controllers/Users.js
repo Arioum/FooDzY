@@ -10,7 +10,6 @@ exports.UserSignUp = (req, res) => {
     LastName: LastName,
   });
 
-  console.log(UserObj);
   UserData.find({
     email: email,
     password: password,
