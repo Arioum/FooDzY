@@ -13,7 +13,7 @@ router.get("/getRestaurantById/:id", RestaurantController.getRestaurantById);
 router.post("/FilterRestaurants", RestaurantController.FilterRestaurants);
 router.get("/getAllLocations", LocationController.getAllLocations);
 router.get("/getAllMealTypes", MealTypeController.getAllMealTypes);
-router.post("/UserSignUp", UserController.UserSignUp);
-router.post("/UserLogin", UserController.UserLogIn);
+router.post("/signup", UserController.UserSignUp);
+router.post("/login", UserController.UserLogIn);
 
 module.exports = router;

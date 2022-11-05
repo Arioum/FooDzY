@@ -5,8 +5,8 @@ const findOrCreate = require("mongoose-findorcreate");
 LocalStrategy = require("passport-local").Strategy;
 userSchema.pulgin(findOrCreate);
 
-//Load model
 const User = require("../models/User");
+//
 const loginCheck = (passport) => {
   passport.use(
     new LocalStrategy({ usernameField: "email" }, (email, password, done) => {

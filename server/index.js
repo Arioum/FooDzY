@@ -9,11 +9,11 @@ const cookieParser = require("cookie-parser");
 //
 const app = express();
 const PORT = process.env.port || 4000;
+const url = process.env.MONGOLAB_URI;
 const routes = require("./routes/routes");
 const authRoute = require("./routes/auth");
 
 //intlizing all the libraries
-app.use("/", routes);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
@@ -23,6 +23,7 @@ app.use(
     credentials: true,
   })
 );
+app.use("/", routes);
 // app.use("/", authRoute);
 app.use(
   session({
@@ -36,14 +37,13 @@ app.use(passport.session());
 app.use(cookieParser("secretcode"));
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type", "Authorization");
   next();
 });
 
 //
-const url = process.env.MONGOLAB_URI;
 
 app.get("/auth/google", (req, res) => {
   passport.authenticate("google", { scope: ["profile"] });
