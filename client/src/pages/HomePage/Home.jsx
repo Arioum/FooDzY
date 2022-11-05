@@ -10,44 +10,44 @@ import './home.css';
 const Home = () => {
   const [Locations, setLocations] = useState([])
   const [MealTypes, setMealTypes] = useState([])
+  const [dataLoad, setDataLoad] = useState({
+    Location: []
+  });
 
   useEffect(() => {
-    // Axios({
-    //   method: "GET",
-    //   withCredentials: true,
-    //   url: `${API_URL}/getAllLocations`,
-    // }).then((res) => res.json())
-    //   .then((data) => setLocations(data.Locations))
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    Axios({
+      method: "GET",
+      withCredentials: true,
+      url: `${API_URL}/getAllLocations`,
+    }).then((res) => {
+      setLocations(res.data.Locations)
+    })
+      .catch((err) => {
+        console.log("get location error");
+      });
 
     // Axios({
     //   method: "GET",
     //   withCredentials: true,
     //   url: `${API_URL}/getAllMealTypes`,
     // }).then((res) => {
-    //   setLocations({
-    //     MealTypes: res.data.MealTypes,
-    //   });
-    //   console.log(res.data);
+    //   setMealTypes(res.data.MealTypes)
     // }).catch((err) => {
     //   console.log(err);
     // });
 
-    Axios
-      .get(`http://localhost:4000/getAllLocations`)
-      .then((res) => {
-        setLocations({
-          Locations: res.data.Locations,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // Axios
+    //   .get(`http://localhost:4000/getAllLocations`)
+    //   .then((res) => {
+    //     setDataLoad({
+    //       Locations: res.data.Locations,
+    //     });
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }, [])
-
-  console.log(Locations);
 
   const navBg = true;
   return (

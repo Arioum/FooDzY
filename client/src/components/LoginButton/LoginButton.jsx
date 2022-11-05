@@ -21,11 +21,12 @@ const customStyles = {
 };
 
 const LoginButton = () => {
+
     // Use state for modals
     const [signUpModal, setSignUpModal] = useState(false);
     const [loginModal, setLoginModal] = useState(false);
 
-    //Use state for Form Data
+    // Use state for Form Data
     const [loginData, setLoginData] = useState({
         email: "",
         password: ""
@@ -38,20 +39,38 @@ const LoginButton = () => {
         password: ""
     })
 
-    // Login
+    // Storing the User info
+    const [userInfo, setUserInfo] = useState({})
 
+    // Login
     const login = () => {
         Axios({
-            method: "post",
+            method: "POST",
             data: loginData,
             withCredentials: true,
-            url: "http://localhost:4000/signup"
-        }).then((res) => console.log(res));
+            url: "http://localhost:4000/login"
+        }).then((res) => setUserInfo(res.data))
+            .catch((err) => {
+                console.log("err loging in");
+            });
     }
 
+    // Register
+    const register = () => {
+        Axios({
+            method: "POST",
+            data: signUpData,
+            withCredentials: true,
+            url: "http://localhost:4000/signup"
+        }).then((res) => setUserInfo(res.data))
+            .catch((err) => {
+                console.log("err signing up user");
+            });
+
+    }
 
     // FORM FUNCTIONALITY
-    const handleChange = (event) => {
+    const handleLoginChange = (event) => {
         const { value, name } = event.target;
 
         setLoginData(inputValue => {
@@ -64,24 +83,52 @@ const LoginButton = () => {
                 return {
                     email: inputValue.email,
                     password: value,
-
                 }
             }
         });
     }
 
-    const handleSubmit = () => {
+    const handleRegisterChange = (event) => {
+        const { value, name } = event.target;
 
+        setSignUpData(inputValue => {
+            if (name === "firstName") {
+                return {
+                    FirstName: value,
+                    LastName: inputValue.LastName,
+                    email: inputValue.email,
+                    password: inputValue.password,
+                }
+            } else if (name === "lastName") {
+                return {
+                    FirstName: inputValue.FirstName,
+                    LastName: value,
+                    email: inputValue.email,
+                    password: inputValue.password,
+                }
+            } else if (name === "email") {
+                return {
+                    FirstName: inputValue.FirstName,
+                    LastName: inputValue.LastName,
+                    email: value,
+                    password: inputValue.password,
+                }
+            } else if (name === "password") {
+                return {
+                    FirstName: inputValue.FirstName,
+                    LastName: inputValue.LastName,
+                    email: inputValue.email,
+                    password: value,
+                }
+            }
+        });
     }
 
 
     // GOOGLE SIGN IN
-
     const googleSignIn = () => {
         window.open("http://localhost:3000/auth/google", "_self")
     }
-
-
 
     // MODAL OPEN AND CLOSE FUNCTIONALITY
     function openLoginModal() {
@@ -99,8 +146,6 @@ const LoginButton = () => {
     function closeSignUpModal() {
         setSignUpModal(false);
     }
-
-
 
     return (
         <div>
@@ -122,8 +167,8 @@ const LoginButton = () => {
                     <div className="signin-container">
                         <form onSubmit={login}>
                             <div className="signin-form">
-                                <input type="email" name="email" onChange={handleChange} value={loginData.email} placeholder="Email" validate="required" />
-                                <input type="password" name="password" onChange={handleChange} value={loginData.password} placeholder="Password" validate="required" />
+                                <input type="email" name="email" onChange={handleLoginChange} value={loginData.email} placeholder="Email" validate="required" />
+                                <input type="password" name="password" onChange={handleLoginChange} value={loginData.password} placeholder="Password" validate="required" />
                                 <button type="submit">Sign Up</button>
                             </div>
                         </form>
@@ -173,12 +218,12 @@ const LoginButton = () => {
                         </button>
                     </div>
                     <div className="signin-container">
-                        <form method="post" >
+                        <form onSubmit={register} >
                             <div className="signin-form">
-                                <input type="text" placeholder="First Name" />
-                                <input type="text" placeholder="Last Name" />
-                                <input type="email" name="" id="" placeholder="Email" validate="required" />
-                                <input type="password" name="" id="" placeholder="Password" validate="required" />
+                                <input onChange={handleRegisterChange} type="text" name="firstName" placeholder="First Name" />
+                                <input onChange={handleRegisterChange} type="text" name="lastName" placeholder="Last Name" />
+                                <input onChange={handleRegisterChange} type="email" name="email" id="" placeholder="Email" validate="required" />
+                                <input onChange={handleRegisterChange} type="password" name="password" id="" placeholder="Password" validate="required" />
                                 <button type="submit">Sign Up</button>
                             </div>
                         </form>
