@@ -4,7 +4,7 @@ import { API_URL } from "../../constants/constants";
 import './header.css';
 
 const Header = ({ Locations }) => {
-    const [cityName, setCityName] = useState("");
+    // const [cityName, setCityName] = useState("");
     const [restaurantName, setRestaurantName] = useState({});
 
     const GetAllRestaurantsByLocation = (event) => {

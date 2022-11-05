@@ -40,7 +40,7 @@ const LoginButton = () => {
     })
 
     // Storing the User info
-    const [userInfo, setUserInfo] = useState({})
+    const [userInfo, setUserInfo] = useState([])
 
     // Login
     const login = () => {
@@ -54,6 +54,7 @@ const LoginButton = () => {
                 console.log("err loging in");
             });
     }
+    console.log(userInfo);
 
     // Register
     const register = () => {
