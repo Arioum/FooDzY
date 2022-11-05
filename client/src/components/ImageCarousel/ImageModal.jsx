@@ -65,7 +65,7 @@ const ImageModal = () => {
 
     return (
         <div className="btn-view-image-gallery">
-            <button onClick={openGalleryModal} class="btn-view-gallery">Click to see Image Gallery</button>
+            <button onClick={openGalleryModal} className="btn-view-gallery">Click to see Image Gallery</button>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeGalleryModal}

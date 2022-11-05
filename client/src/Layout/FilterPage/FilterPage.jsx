@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 // import Pagination from 'react-js-pagination';
-// import queryString from "querystring";
 import SortBy from '../../components/Filter-Sort/SortBy';
 import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
 // import Axios from 'axios';
@@ -89,7 +88,7 @@ const FilterPage = ({ category }) => {
                 <div className="Search-Results">
                     <div className="Result-scroll-container">
                         {true ? (
-                            <>  
+                            <>
                                 <Link to='/details' style={{ textDecoration: 'none' }}>
                                     <RestaurantCard />
                                 </Link>
