@@ -1,0 +1,49 @@
+.menu-item-container {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* orderfooter */
+.order-total-footerbar {
+    box-shadow: 0px 1px 10px #00000029;
+}
+
+.order-footer-contents {
+    display: flex;
+    padding: 2em 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-left-info button {
+    border: none; 
+    background-color: #eee;
+}
+
+.order-left-info h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.order-right-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.order-right-info h3 {
+    margin: 0;
+}
+
+.order-right-info button {
+    background-color: #db1919;
+    color: #fff;
+    border: none;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+}

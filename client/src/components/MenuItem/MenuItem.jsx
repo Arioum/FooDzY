@@ -16,8 +16,9 @@ const MenuItem = () => {
         <div>
             <div className="item-container">
                 <div className="item-details">
-                    <h4>Chicken Golden Delight</h4>
+                    <h3>Chicken Golden Delight</h3>
                     <p>Mmm! Barbeque chicken with a topping of golden corn loaded with extra cheese. Worth its weight in gold!</p>
+                    <h4>459</h4>
                 </div>
                 <div className="item-preview add-item-btn">
                     <div className="item-img">
@@ -26,7 +27,7 @@ const MenuItem = () => {
                     <div className="item-add">
                         <button onClick={itemIncrease}>-</button>
                         <div className="count-display">
-                            <h4>ADD</h4>
+                            <h5>ADD</h5>
                         </div>
                         <button onClick={itemDecrease}>+</button>
                     </div>

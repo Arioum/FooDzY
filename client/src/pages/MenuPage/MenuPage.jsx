@@ -11,8 +11,8 @@ const MenuPage = () => {
             <div className="wrapper">
                 <RestaurantInfoHeader />
                 <MenuCardContainer />
-                <OrderTotalCard />
             </div>
+            <OrderTotalCard />
         </>
     )
 }
