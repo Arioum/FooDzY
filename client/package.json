@@ -15,6 +15,7 @@
     "react-modal": "^3.15.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-simple-star-rating": "^5.1.6",
     "react-tabs": "^5.1.0",
     "swiper": "^8.3.2",
     "url-search-params": "^1.1.0",

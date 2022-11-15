@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ImageGallery from '../../components/ImageGallery/ImageGallery';
 import ImageModal from '../../components/ImageCarousel/ImageModal';
 import PlaceOrderButton from '../../components/PlaceOrder/PlaceOrderButton';
+import { MdDeliveryDining } from "react-icons/md";
+import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
+import { Rating } from 'react-simple-star-rating'
 import './detailsPage.css'
 
 const DetailsPage = () => {
+    const [rating, setRating] = useState(4.5);
+    // const handleRating = (rate: number) => {
+    //     setRating(rate)
+    //   }
     return (
         <div className='wrapper'>
             <div className="section-gallery">
@@ -18,11 +25,23 @@ const DetailsPage = () => {
             </div>
             <div className="restaurant-details-container">
                 <div className="restaurant-details-header">
-                    <div className="restaurant-details-name">
-                        Dominos Pizza
+                    <div className="">
+                        <div className="restaurant-details-name">
+                            Dominos Pizza
+                        </div>
+                        <div className="">
+                            <Rating allowFraction={true} readonly={true} initialValue={rating} />
+
+                        </div>
                     </div>
-                    <div className="restaurant-details-place-order-btn">
-                        <PlaceOrderButton />
+                    <div className="">
+                        <div className="restaurant-details-place-order-btn">
+                            <PlaceOrderButton />
+                        </div>
+                        <div className="">
+                            <MdDeliveryDining />
+                            <p>Delivers usually in 25-40mins</p>
+                        </div>
                     </div>
                 </div>
                 <div className="tab-container">
